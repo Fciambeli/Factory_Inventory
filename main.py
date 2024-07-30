@@ -309,21 +309,6 @@ e_series.place (x=130, y=191)
 l_image = Label(mainframe, text='Item image', width=30, height=(1), anchor=NW, font=('Ivi 10 bold'), bg=co1, fg=co4)
 l_image.place(x=10, y=220)
 
-# values field
-
-l_cost_background = Label(mainframe, width=14, text='', height=(3), anchor=CENTER, font=('Ivi 17 bold'), bg=co7, fg=co1)
-l_cost_background.place(x=450, y=17)
-
-l_total_cost = Label(mainframe, text ='   Total amount                         ', height=(1), anchor=NW, font=('Ivi 10 bold'), bg=co7, fg=co1)
-l_total_cost.place(x=450, y=12)
-
-# total quantity field
-
-l_quantity_background = Label(mainframe, width=14, text='', height=(3), anchor=CENTER, font=('Ivi 17 bold'), bg=co7, fg=co1)
-l_quantity_background.place(x=450, y=90)
-
-l_total_quantity = Label(mainframe, text ='   Total quantity                        ', height=(1), anchor=NW, font=('Ivi 10 bold'), bg=co7, fg=co1)
-l_total_quantity.place(x=450, y=92)
 
 # making buttons in main frame
 
@@ -417,14 +402,6 @@ def show():
        tree.insert('', 'end', values=item)
     
     quantity = [8888,88]
-    
-    for iten in itens_list:
-        quantity.append(iten[6])
-    total_cost = sum(quantity)
-    total_itens = len(quantity)
-    
-    l_cost_background ['text'] = 'USD {:,.2f}'.format(total_cost)
-    l_quantity_background ['text'] = total_itens
 
 show()
 
